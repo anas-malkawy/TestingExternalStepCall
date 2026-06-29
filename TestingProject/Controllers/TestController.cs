@@ -25,7 +25,7 @@ namespace TestingProject.Controllers
         {
             documentId = 102,
             fileName = "salary.pdf",
-            documentType = "SalaryCertificate",
+            documentType = "SalaryCertificates",
             Newemail="anas.malkawy1999@gmail.com"
         }
     };
