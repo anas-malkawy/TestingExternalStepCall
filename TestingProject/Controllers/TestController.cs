@@ -19,26 +19,47 @@ namespace TestingProject.Controllers
             documentId = 101,
             fileName = "id.pdf",
             documentType = "ID",
-            email="anas.jawabreh@aisdigicore.com"
+            Newemail="anas.jawabreh@aisdigicore.com"
         },
         new
         {
             documentId = 102,
             fileName = "salary.pdf",
             documentType = "SalaryCertificate",
-            email="anas.malkawy1999@gmail.com"
-        },
-        new
-        {
-            documentId = 103,
-            fileName = "contract.pdf",
-            documentType = "Contract",
-            email="anas.jawabreh@aisdigicore.com"
+            Newemail="anas.malkawy1999@gmail.com"
         }
     };
 
             return Ok(res);
         }
+        // GET: api/<TestController>
+        [HttpGet("test")]
+        public IActionResult Geta()
+        {
+            var res = "{\r\n  \"data\": {\r\n    \"users\": [\r\n      {\r\n        \"id\": 1,\r\n        \"profile\": {\r\n          \"email\": \"anas@gmail.com\",\r\n          \"roles\": [\"Admin\", \"Developer\"]\r\n        },\r\n        \"accounts\": [\r\n          {\r\n            \"accountId\": 111,\r\n            \"transactions\": [\r\n              { \"trxId\": 1, \"amount\": 500 },\r\n              { \"trxId\": 2, \"amount\": 200 }\r\n            ]\r\n          }\r\n        ]\r\n      },\r\n      {\r\n        \"id\": 2,\r\n        \"profile\": {\r\n          \"email\": \"ali@gmail.com\",\r\n          \"roles\": [\"Tester\", \"Support\"]\r\n        }\r\n      }\r\n    ]\r\n  }\r\n}";
+
+            return Ok(res);
+        }
+
+        // GET: api/<TestController>
+        [HttpGet("a")]
+        public IActionResult Gett()
+        {
+            var res = new List<object>
+    {
+        new
+        {
+            documentId = 101,
+            fileName = "id.pdf",
+            documentType = "ID",
+            Newemail="anas.jawabreh@aisdigicore.com"
+        }
+    };
+
+            return Ok(res);
+        }
+
+
 
         // GET api/<TestController>/5
         [HttpGet("{id}")]
